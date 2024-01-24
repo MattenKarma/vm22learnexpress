@@ -1,0 +1,28 @@
+{% extends "partials/layout.njk" %}
+{% block title %}Form{%endblock%}
+{% block content %}
+<h1>Form</h1>
+{% if fname and lname and age %}
+<p>Hello {{ fname }}  {{ lname }}! You are {{age}} years old</p>
+<form>
+    <p>
+    <label for="fname">First name</label>
+    <input id="fname" type="text" placeholder="First name" name="fname">
+    </p>
+
+    <p>
+    <label for="lname">Last name</label>
+    <input id="lname" type="text" placeholder="Last name" name="lname">
+    </p>
+
+    </p>
+    <label for="age">Age</label>
+    <input id="age" type="number" min="0" max="150"S placeholder="Age" name="age">
+    </p>
+
+     <p>
+        <input type="submit" value="Send">
+     </p>
+
+</form>
+{% endblock %}
