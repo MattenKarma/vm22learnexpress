@@ -1,0 +1,17 @@
+{
+    "lastId": 2,
+    "movies": [
+        {
+            "id": 0,
+            "name": "Star wars",
+            "year": "1977",
+            "description": "jup"
+        },
+        {
+            "id": 1,
+            "name": "star wars 2",
+            "year": "1980",
+            "description": "norm"
+        }
+    ]
+}
