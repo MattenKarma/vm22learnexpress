@@ -9,6 +9,7 @@
      <a href="/movies/add">Add<br></a>
        <table style="border: 1px solid black">
              <thead>
+               <th>ID</th>
                <th>Name</th>
                <th>Year</th>
                <th>Description</th>
@@ -16,7 +17,8 @@
               <tbody>
                {% for movie in movies %}
                <tr>
-                    <td>{{movie.name}}</td>
+                    <td>{{movie.id}}</td>
+                    <td>{{ movie.name }}</td>
                     <td>{{ movie.year }}</td>
                     <td>{{ movie.description }}</td>
                </tr>
