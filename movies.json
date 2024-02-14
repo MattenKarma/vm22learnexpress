@@ -1,17 +1,1 @@
-{
-    "lastId": 2,
-    "movies": [
-        {
-            "id": 0,
-            "name": "Star wars",
-            "year": "1977",
-            "description": "jup"
-        },
-        {
-            "id": 1,
-            "name": "star wars 2",
-            "year": "1980",
-            "description": "norm"
-        }
-    ]
-}
+{"lastId":4,"movies":[{"id":0,"name":"Star wars ","year":"1977","description":"jup"},{"id":1,"name":"star wars 2","year":"1980","description":"norm"},{"id":3,"name":"Star wars IV New hope","year":"1978","description":"banger!"}]}
