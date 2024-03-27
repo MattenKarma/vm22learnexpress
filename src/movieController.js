@@ -4,34 +4,7 @@ const fs = require('fs');
 const {Sequelize, QueryTypes, DataTypes} = require('sequelize');
 let sequelize = new Sequelize('sqlite:db.sqlite');
 
-const Movie = sequelize.define('Movie',{
-     id: {
-         type: DataTypes.INTEGER,
-         autoIncrement: true,
-         primaryKey: true,
-     },
-
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    year: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    description: {
-        type: DataTypes.TEXT
-    }
-}, {tableName: 'movies', timestamps:false});
-
-router.get('/',async (req, res) => {  
-    let movies = await sequelize.query('SELECT * FROM movies;',{type: QueryTypes.SELECT});
-    res.render('movies/index.njk', {movies: movies});
-});
-
-router.get('/add', (req, res) => {
-    res.render('movies/add.njk');
-});
+const Movie = require('./models/Movie.js');
 
 router.post('/add', async(req, res) => {
     await Movie.create({
