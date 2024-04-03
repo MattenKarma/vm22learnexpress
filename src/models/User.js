@@ -1,7 +1,7 @@
 const {Sequelize, QueryTypes, DataTypes} = require('sequelize');
 let sequelize = new Sequelize('sqlite:db.sqlite');
 
-module.exports = sequelize.define('Movie',{
+module.exports = sequelize.define('User',{
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -20,4 +20,4 @@ module.exports = sequelize.define('Movie',{
        type: DataTypes.STRING,
        allowNull: false,
    }
-}, {tableName: 'movies', timestamps:false});
+}, {tableName: 'users', timestamps:false});
