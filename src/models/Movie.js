@@ -1,7 +1,7 @@
 const {Sequelize, QueryTypes, DataTypes} = require('sequelize');
+const User = require('./User.js');
 let sequelize = new Sequelize('sqlite:db.sqlite');
-
-module.exports = sequelize.define('Movie',{
+const Movie = sequelize.define('Movie',{
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -20,3 +20,8 @@ module.exports = sequelize.define('Movie',{
        type: DataTypes.TEXT
    }
 }, {tableName: 'movies', timestamps:false});
+
+Movie.belongsTo(User,{foreignKey: 'user_id'});
+
+
+module.exports = Movie;
