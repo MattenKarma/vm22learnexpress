@@ -37,11 +37,12 @@ router.post('/add', async (req, res) => {
 
 router.get('/view', async (req, res) => {
     let id = parseInt(req.query.id);
-    let movie = Movie.findOne({
+    let movie = await Movie.findOne({
         where: {
             id: req.query.id
         }
     });
+    console.log(movie)
     res.render('movies/view.njk', { movie: movie });
 });
 
