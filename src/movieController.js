@@ -59,7 +59,7 @@ router.post('/edit/:id', async (req, res) => {
     await Movie.update({
         name: req.body.movie,
         year: req.body.year,
-        description: req.body.desctription
+        description: req.body.description
     }, {
         where: {
             id: req.params.id
