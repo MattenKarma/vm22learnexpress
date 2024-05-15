@@ -22,6 +22,10 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
+      image:{
+        type: Sequelize.STRING
+      },
+
       UserId:{
        type: Sequelize.INTEGER,
        references: {
